@@ -10,6 +10,8 @@
 body {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -90,12 +92,16 @@ footer {
   padding: 8px;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  /* put the button at the bottom vertically */
+  flex: 1;
+  /* flex:1 makes the footer stick to the bottom */
 }
 footer button {
   padding: 10px 20px;
   font-size: 16px;
   background-color: lightblue;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 /* media query */
