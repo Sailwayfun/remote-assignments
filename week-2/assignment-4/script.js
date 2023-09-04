@@ -10,23 +10,14 @@ const sideMenu = document.querySelector(".side-menu");
 const sideMenuToggle = document.querySelector(".side-menu-toggle");
 sideMenuToggle.addEventListener("click",
     (event) => {
-        // close the side menu, if it's open
-        if (sideMenu.style.right === "0") {
             sideMenu.style.right = "-100%";
             hamburgerMenu.style.opacity = "1";
-        } 
     }
 );
 
 hamburgerMenu.addEventListener("click", (event) => {
-    if (hamburgerMenu.style.opacity === "1") {
         hamburgerMenu.style.opacity = "0";
         sideMenu.style.right = "0";
-    }
-    else {
-        hamburgerMenu.style.opacity = "1";
-        sideMenu.style.right = "-100%";
-    }
 
 
 })
