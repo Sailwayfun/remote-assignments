@@ -1,0 +1,136 @@
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: blue;
+}
+
+/* navbar */
+nav {
+  width: 100%;
+  background-color: #ddd;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+}
+
+nav ul .hamburger-menu {
+  margin-right: 40px;
+  font-size: 30px;
+}
+
+nav ul .nav-item {
+  display: none;
+}
+
+nav .logo {
+  margin-left: 30px;
+}
+
+/* header */
+header {
+  padding: 50px 0px;
+  background-color: lightblue;
+  width: 100%;
+}
+header h1 {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+section {
+  padding: 10px;
+}
+
+section h2 {
+  text-align: center;
+  margin: 32px;
+}
+
+section .container {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+section .container .box {
+  background-color: #999;
+  margin-bottom: 16px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* footer */
+footer {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* put the button at the bottom vertically */
+  flex: 1;
+  /* flex:1 makes the footer stick to the bottom */
+}
+footer button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: lightblue;
+  margin-bottom: 16px;
+}
+
+/* media query */
+@media (min-width: 500px) {
+  section .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
+  section .container .box {
+    margin-bottom: 6px;
+  }
+  section .container .box-last {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 800px) {
+  nav ul .hamburger-menu {
+    display: none;
+  }
+  nav ul .nav-item {
+    margin-right: 40px;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1200px) {
+  section .container {
+    max-width: 1200px;
+  }
+}
