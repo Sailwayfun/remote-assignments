@@ -107,22 +107,10 @@ footer button {
   margin-bottom: 16px;
 }
 
-/* media query */
-@media (min-width: 500px) {
-  section .container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 16px;
-  }
-  section .container .box {
-    margin-bottom: 6px;
-  }
-}
-
 /* side-menu */
 .side-menu {
-  display: none;
   position: fixed;
-  right: 0;
+  right: -100%;
   top: 0;
 }
 .side-menu ul {
@@ -134,6 +122,7 @@ footer button {
   padding: 1.25rem 14rem 16rem 1rem;
   align-items: flex-start;
 }
+
 .side-menu-toggle {
   display: block;
   position: absolute;
@@ -150,6 +139,19 @@ footer button {
 .side-menu li {
   flex: 1;
 }
+
+/* media query */
+@media (min-width: 500px) {
+  section .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
+  section .container .box {
+    margin-bottom: 6px;
+  }
+}
+
+
 
 @media (min-width: 800px) {
   nav ul .hamburger-menu {
