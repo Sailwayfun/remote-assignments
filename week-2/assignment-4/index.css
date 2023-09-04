@@ -112,6 +112,8 @@ footer button {
   position: fixed;
   right: -100%;
   top: 0;
+  transition: right .3s ease-in;
+  /* 加點動畫比較滑順 */
 }
 .side-menu ul {
   background-color: #fff;
