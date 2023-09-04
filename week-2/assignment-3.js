@@ -1,5 +1,8 @@
 function calculate(data) {
-
+    const times = 1 - data.discount;
+    const priceArr = data.products.map(product => product.price * times);
+    const discountedAmount = priceArr.reduce((a, b) => a + b);
+    return discountedAmount;
 }
 
 const discountedPrice = calculate({
