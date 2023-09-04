@@ -27,6 +27,7 @@ nav {
   width: 100%;
   background-color: #ddd;
   padding: 10px 0;
+  position: relative;
 }
 
 nav ul {
@@ -41,6 +42,8 @@ nav ul li:first-child {
 nav ul .hamburger-menu {
   margin-right: 40px;
   font-size: 30px;
+  cursor: pointer;
+  display: inline-block;
 }
 
 nav ul .nav-item {
@@ -119,11 +122,44 @@ footer button {
   }
 }
 
+/* side-menu */
+.side-menu {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.side-menu ul {
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2rem 16rem 16rem 1rem;
+  align-items: flex-start;
+}
+.side-menu-toggle {
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+  color: black;
+  background-color: transparent;
+  z-index: 1;
+  /* 置於最上層 */
+  border: none;
+  font-size: 2rem;
+}
+.side-menu li {
+  flex: 1;
+}
+
 @media (min-width: 800px) {
   nav ul .hamburger-menu {
     display: none;
   }
-  nav ul .nav-item {
+  nav ul .nav-item, nav ul .side-nav-item {
     margin-right: 40px;
     display: inline-block;
   }
