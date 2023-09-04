@@ -3,16 +3,16 @@ function calculate(args) {
     if (op !== "+" && op !== "-" && op !== "*" && op !== "/") {
         return "Not Supported"
     }
-    if (op === "+") {
+    else if (op === "+") {
         return (n1 + n2);
     }
-    if (op === "-") {
+    else if (op === "-") {
         return (n1 - n2);
     }
-    if (op === "*") {
+    else if (op === "*") {
         return (n1 * n2);
     }
-    if (op === "/") {
+    else if (op === "/") {
         return (n1 / n2);
     }
 }
