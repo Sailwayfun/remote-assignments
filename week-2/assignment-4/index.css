@@ -135,7 +135,7 @@ footer button {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 2rem 16rem 16rem 1rem;
+  padding: 1.25rem 14rem 16rem 1rem;
   align-items: flex-start;
 }
 .side-menu-toggle {
@@ -162,6 +162,9 @@ footer button {
   nav ul .nav-item, nav ul .side-nav-item {
     margin-right: 40px;
     display: inline-block;
+  }
+  .side-menu ul {
+    padding-right: 16rem;
   }
 }
 
