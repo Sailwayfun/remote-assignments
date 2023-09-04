@@ -17,4 +17,4 @@ function calculate(args) {
     }
 }
 
-calculate({n1: 5, n2: 7, op: "*"});
+// calculate({n1: 1, n2: 2, op: "+"});
