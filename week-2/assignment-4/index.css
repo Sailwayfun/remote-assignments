@@ -116,10 +116,6 @@ footer button {
   section .container .box {
     margin-bottom: 6px;
   }
-  section .container .box-last {
-    display: flex;
-    justify-content: center;
-  }
 }
 
 /* side-menu */
