@@ -5,7 +5,6 @@ document.querySelector("header").addEventListener("click",
 );
 
 const hamburgerMenu = document.querySelector(".hamburger-menu");
-const sideNavItem = document.querySelectorAll(".side-nav-item");
 const sideMenu = document.querySelector(".side-menu");
 const sideMenuToggle = document.querySelector(".side-menu-toggle");
 sideMenuToggle.addEventListener("click",
