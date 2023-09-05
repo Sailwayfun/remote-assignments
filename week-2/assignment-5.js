@@ -4,9 +4,6 @@ function twoSum(nums, target) {
     while (b === -1) {
         a++;
         b = nums.findIndex(num => nums[a] + num === target);
-        if (b !== -1) {
-            break;
-        }
     }
     if (a > b) {
         return [b, a];
