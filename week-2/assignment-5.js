@@ -3,9 +3,9 @@ function twoSum(nums, target) {
     let b = nums.findIndex(num => nums[a] + num === target);
     while (b === -1) {
         a++;
-        b++;
-        if (nums[a] + nums[b] === target) {
-            break
+        b = nums.findIndex(num => nums[a] + num === target);
+        if (b !== -1) {
+            break;
         }
     }
     if (a > b) {
@@ -13,7 +13,7 @@ function twoSum(nums, target) {
     } else {
         return [a, b];
     }
-    
+
 
 }
 
