@@ -143,6 +143,11 @@ footer {
   flex: 1;
 }
 
+/* lower four content boxes */
+.lower-boxes {
+  display: none;
+}
+
 /* media query */
 @media (min-width: 500px) {
   .container {
