@@ -75,14 +75,14 @@ section h2 {
   margin: 32px;
 }
 
-section .container {
+.container {
   width: 100%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
 
-section .container .box {
+.container .box {
   background-color: #999;
   margin-bottom: 16px;
   padding: 40px;
@@ -94,8 +94,9 @@ section .container .box {
 footer {
   padding: 8px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   /* put the button at the bottom vertically */
   flex: 1;
   /* flex:1 makes the footer stick to the bottom */
@@ -144,11 +145,11 @@ footer {
 
 /* media query */
 @media (min-width: 500px) {
-  section .container {
+  .container {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 16px;
   }
-  section .container .box {
+  .container .box {
     margin-bottom: 6px;
   }
 }
