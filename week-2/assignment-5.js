@@ -1,6 +1,6 @@
 function twoSum(nums, target) {
     let a = 0;
-    let b = nums.findIndex(num => num[a] + num === target);
+    let b = nums.findIndex(num => nums[a] + num === target);
     while (b === -1) {
         a++;
         b++;
