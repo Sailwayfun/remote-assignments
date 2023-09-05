@@ -20,3 +20,10 @@ hamburgerMenu.addEventListener("click", (event) => {
 
 
 })
+
+// call-to-action button actions
+const footerButton = document.querySelector(".footer-button");
+const lowerBoxes = document.querySelector(".lower-boxes");
+footerButton.addEventListener("click", (event) => {
+    lowerBoxes.style.display = "grid";
+})
