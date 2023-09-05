@@ -100,7 +100,7 @@ footer {
   flex: 1;
   /* flex:1 makes the footer stick to the bottom */
 }
-footer button {
+.footer-button {
   padding: 10px 20px;
   font-size: 16px;
   background-color: lightblue;
