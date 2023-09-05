@@ -106,6 +106,7 @@ footer {
   font-size: 16px;
   background-color: lightblue;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 /* side-menu */
