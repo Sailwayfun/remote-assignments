@@ -1,12 +1,13 @@
 function calculate(data) {
     const times = 1 - data.discount;
-    console.log(times);
     // const priceArr = data.products.map(product => product.price * times);
     // const discountedAmount = priceArr.reduce((a, b) => a + b);
-    const getTotalPrice = (prod1, prod2) => {
-        return (prod1.price * times + prod2.price * times);
+    const getTotalPrice = (accumulator, prod) => {
+        return (accumulator + prod.price * times);
     }
-    const discountedAmount = data.products.reduce(getTotalPrice);
+    const discountedAmount = data.products.reduce(getTotalPrice, 0);
+    ///reduce method中指明accumulator的初始值是0，每次都加上products[i]的price值，
+    ///就能確保每次累加都能取得product的價格
     return discountedAmount;
 }
 
