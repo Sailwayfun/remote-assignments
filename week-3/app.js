@@ -7,6 +7,7 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "./index.html"));
 })
 
+////the getData API
 app.get("/getData", (req, res) => {
     const query = req.query;
     const { number } = query;
@@ -22,6 +23,9 @@ app.get("/getData", (req, res) => {
     }
     
 })
+
+////sum.html
+app.use("/sum.html", express.static(path.join(__dirname, "sum.html")));
 
 
 app.listen(port, () => {
