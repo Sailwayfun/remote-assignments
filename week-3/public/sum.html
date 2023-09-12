@@ -24,7 +24,7 @@
             document.body.innerHTML = this.responseText;
           } 
         };
-        xhttp.open("GET", `http://localhost:3000/getData?number=${inputValue}`, true);
+        xhttp.open("GET", `/getData?number=${inputValue}`, true);
         xhttp.send();
       }
     </script>
