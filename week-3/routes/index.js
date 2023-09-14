@@ -12,15 +12,19 @@ router.get("/getData", (req, res) => {
     const query = req.query;
     const { number } = query;
     const num = Number(number);
+    const data = {};
     if (!number) {
-        res.send("<h1>Lack of Parameter</h1><p>Refresh the page and try again.</p>");
+        data.heading = "Lack of Parameter";
+        data.message = "Refresh the page and try again."
     } else if (!Number.isInteger(num) || Number(num) < 1 || isNaN(Number(num))) {
-        res.send("<h1>Wrong Parameter</h1><p>Refresh the page and try again.</p>");
+        data.heading = "Wrong Parameter";
+        data.message = "Refresh the page and try again."
     } else {
         const sum = ((1 + num) * (num) / 2).toString();
-        res.send(`<h1>${sum}</h1><p>Refresh the page and try again.</p>`);
-
+        data.heading = sum;
+        data.message = "Refresh the page and try again."
     }
+    res.render("get-data", data);
 
 })
 
