@@ -30,7 +30,6 @@ router.get("/getData", (req, res) => {
 
 ///an api to store cookie
 router.get("/myName", (req, res) => {
-    console.log(req.cookies.username);
     if (req.cookies.username) {
         res.render("my-name", { name: req.cookies.username });
     } else {

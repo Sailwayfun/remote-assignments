@@ -21,18 +21,19 @@ app.use(express.static("public"));
 
 ///error handling--404
 app.use((req, res, next) => {
-    const err = new Error("<h1>Not Found.<h1><p>Please enter in the end of the url: getData?number=, and then enter a positive integer.</p><p>The number should be equal or greater than 1, and should be a whold number.</p>");
+    const err = new Error("Not Found");
     err.status = 404;
     next(err);
 })
 ///error handling--global error
 app.use((err, req, res, next) => {
     if (err.status === 404) {
-        res.status(err.status).send(err.message);
+        res.status(err.status)
+        res.render("error", { err });
     } else {
         err.message = err.message || "There's something wrong with the server. Please connect again.";
         res.status(500 || err.status);
-        res.send(err.message);
+        res.render("error", { err });
     }
 })
 
