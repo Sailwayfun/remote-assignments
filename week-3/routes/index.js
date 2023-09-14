@@ -13,12 +13,12 @@ router.get("/getData", (req, res) => {
     const { number } = query;
     const num = Number(number);
     if (!number) {
-        res.send("<h1>Lack of Parameter</h1>");
+        res.send("<h1>Lack of Parameter</h1><p>Refresh the page and try again.</p>");
     } else if (!Number.isInteger(num) || Number(num) < 1 || isNaN(Number(num))) {
-        res.send("<h1>Wrong Parameter</h1>");
+        res.send("<h1>Wrong Parameter</h1><p>Refresh the page and try again.</p>");
     } else {
         const sum = ((1 + num) * (num) / 2).toString();
-        res.send(`<h1>${sum}</h1>`);
+        res.send(`<h1>${sum}</h1><p>Refresh the page and try again.</p>`);
 
     }
     
