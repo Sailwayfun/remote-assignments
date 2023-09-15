@@ -12,12 +12,15 @@ app.set("view engine", "pug");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+
+///serve static files in "public" directory
+app.use(express.static("public"));
+
 ////use the route definitions
 const mainRoutes = require("./routes");
 app.use(mainRoutes);
 
-///serve static files in "public" directory
-app.use(express.static("public"));
+
 
 ///error handling--404
 app.use((req, res, next) => {
