@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  background-color: rgb(239, 234, 229);
+  width: 100%;
+  padding: 6rem 4rem;
+}
+
+.container {
+  width: 100%;
+  padding: 12rem 4rem;
+  border: 10px solid red;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+.item {
+  flex: 1 1 30%;
+  border: 1px solid blue;
+  padding: 2rem 0.5rem;
+  text-align: center;
+}
+
+
+@media screen and (min-width: 500px) {
+    .container {
+        flex-direction: row;
+        padding: 12rem 4rem;
+    }
+}
