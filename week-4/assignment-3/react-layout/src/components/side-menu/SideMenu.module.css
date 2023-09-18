@@ -1,0 +1,33 @@
+.sideMenu {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    transition: right .3s ease-in;
+    background-color: #ddd;
+}
+
+.show {
+    right: 0;
+}
+
+.sideMenuList {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 1.25rem 14rem 16rem 1rem;
+    align-items: flex-start;
+}
+
+.sideMenuToggle {
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: black;
+    background-color: transparent;
+    z-index: 1;
+    border: none;
+    font-size: 2rem;
+}
