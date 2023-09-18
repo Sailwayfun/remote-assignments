@@ -8,10 +8,7 @@ const itemNumbers = [1, 2, 3, 4];
 
 const NavBar = () => {
     const [showSideMenu, setShowSideMenu] = useState(false);
-    const openSideMenuHandler = () => {
-        setShowSideMenu(((prevState) => (!prevState)));
-    }
-    const closeMenuHandler = () => {
+    const sideMenuToggleHandler = () => {
         setShowSideMenu(((prevState) => (!prevState)));
     }
     return <nav className={styles.nav}>
@@ -20,12 +17,12 @@ const NavBar = () => {
                 <a href="#">Website Title</a> /
                 <img src="" alt="logo" />
             </li>
-            <ToggleButton onToggle={openSideMenuHandler} className={styles.navToggle}>
+            <ToggleButton onToggle={sideMenuToggleHandler} className={styles.navToggle}>
                 <b>&#9776;</b>
             </ToggleButton>
             {itemNumbers.map(number => <NavItem key={number} order={number}></NavItem>)}
         </ul>
-        <SideMenu show={showSideMenu} onToggle={closeMenuHandler} order={itemNumbers}/>
+        <SideMenu show={showSideMenu} onToggle={sideMenuToggleHandler} order={itemNumbers}/>
     </nav>
 }
 
