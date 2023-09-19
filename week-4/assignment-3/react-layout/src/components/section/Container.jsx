@@ -3,10 +3,12 @@ import ContentBox from "./ContentBox";
 import { useContext } from "react";
 import { BoxContext } from "../../App";
 
-const Container = () => {
+const Container = (props) => {
+    const {position} = props
     const boxes = useContext(BoxContext);
     return <div className={styles.container}>
-        {boxes.map(box => <ContentBox key={box.id} text={box.text}/>)}
+        {position === "upper" && boxes.upper.map(box => <ContentBox key={box.id} text={box.text}/>)}
+        {position === "lower" && boxes.lower.map(box => <ContentBox key={box.id} text={box.text}/>)}
     </div>
 }
 

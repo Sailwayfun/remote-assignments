@@ -3,18 +3,20 @@ import NavBar from './components/nav/NavBar';
 import Header from './components/header/Header';
 import Section from "./components/section/Section";
 import { useState, createContext } from "react";
-import ToggleButton from './components/ui/ToggleButton';
+import CallToAction from './components/section/CallToAction';
 
-const contentBoxes = [
-  { id: 1, text: "Content Box 1" },
-  { id: 2, text: "Content Box 2" },
-  { id: 3, text: "Content Box 3" },
-  { id: 4, text: "Content Box 4" },
-  { id: 5, text: "Content Box 5" },
-  { id: 6, text: "Content Box 6" },
-  { id: 7, text: "Content Box 7" },
-  { id: 8, text: "Content Box 8" },
-]
+const contentBoxes = 
+  {
+    upper: [{ id: 1, text: "Content Box 1" },
+    { id: 2, text: "Content Box 2" },
+    { id: 3, text: "Content Box 3" },
+    { id: 4, text: "Content Box 4" }],
+    lower: [{ id: 5, text: "Content Box 5" },
+    { id: 6, text: "Content Box 6" },
+    { id: 7, text: "Content Box 7" },
+    { id: 8, text: "Content Box 8" }],
+  }
+
 export const BoxContext = createContext([]);
 
 function App() {
@@ -32,7 +34,9 @@ function App() {
       <BoxContext.Provider value={contentBoxes}>
         <NavBar />
         <Header onClick={handleClickHeader} greeting={message} />
-        <Section position="upper" show={showLowerBoxes} onToggle={handleBoxesToggle}/>
+        <Section position="upper" />
+        <CallToAction onToggle={handleBoxesToggle} />
+        <Section position="lower" show={showLowerBoxes} />
       </BoxContext.Provider>
     </>
   )
