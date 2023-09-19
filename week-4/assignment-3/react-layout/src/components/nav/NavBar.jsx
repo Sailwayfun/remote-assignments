@@ -1,5 +1,5 @@
 import styles from "./NavBar.module.css"
-import NavItem from "./NavItem";
+import NavItem from "../ui/NavItem";
 import ToggleButton from "../ui/ToggleButton";
 import SideMenu from "../side-menu/SideMenu";
 import { useState } from "react";
@@ -20,7 +20,7 @@ const NavBar = () => {
             <ToggleButton onToggle={sideMenuToggleHandler} className={styles.navToggle}>
                 <b>&#9776;</b>
             </ToggleButton>
-            {itemNumbers.map(number => <NavItem key={number} order={number}></NavItem>)}
+            {itemNumbers.map(number => <NavItem key={number} order={number} type="main"></NavItem>)}
         </ul>
         <SideMenu show={showSideMenu} onToggle={sideMenuToggleHandler} order={itemNumbers}/>
     </nav>

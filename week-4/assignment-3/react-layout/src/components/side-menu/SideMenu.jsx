@@ -1,5 +1,5 @@
 import styles from "../side-menu/SideMenu.module.css";
-import SideNavItem from "../side-menu/SideNavItem"
+import NavItem from "../ui/NavItem";
 import ToggleButton from "../ui/ToggleButton";
 
 const SideMenu = (props) => {
@@ -7,7 +7,7 @@ const SideMenu = (props) => {
     return <nav className={`${styles.sideMenu} ${show ? styles.show : ""}`}>
         <ToggleButton className={styles.sideMenuToggle} onToggle={onToggle}>X</ToggleButton>
         <ul className={styles.sideMenuList}>
-            {order.map(number => <SideNavItem key={number} order={number}></SideNavItem>)}
+            {order.map(number => <NavItem key={number} order={number} type="sideMenu"></NavItem>)}
         </ul>
     </nav>
 }

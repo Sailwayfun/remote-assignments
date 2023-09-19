@@ -2,6 +2,10 @@
   display: none;
 }
 
+.sideNavItem {
+  flex: 1;
+}
+
 @media screen and (min-width: 800px) {
   .navItem {
     margin-right: 40px;
