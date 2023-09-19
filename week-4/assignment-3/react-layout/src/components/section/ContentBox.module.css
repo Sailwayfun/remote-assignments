@@ -1,0 +1,8 @@
+.contentBox {
+    background-color: #999;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    flex: 1 1 45%;
+}
+
