@@ -16,8 +16,10 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
