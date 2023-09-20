@@ -1,0 +1,15 @@
+.main-container {
+    padding: 5rem;
+    border: 3px solid black;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.error {
+    text-align: center;
+    font-size: 1.5rem;
+    color: red;
+}
