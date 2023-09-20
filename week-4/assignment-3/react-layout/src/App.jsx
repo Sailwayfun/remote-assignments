@@ -2,6 +2,8 @@ import './App.css'
 import NavBar from './components/nav/NavBar';
 import Header from './components/header/Header';
 import Section from "./components/section/Section";
+import UpperSection from "./components/section/UpperSection";
+import LowerSection from "./components/section/LowerSection";
 import { useState, createContext } from "react";
 import CallToAction from './components/section/CallToAction';
 
@@ -21,12 +23,12 @@ export const BoxContext = createContext([]);
 
 function App() {
   const [message, setMessage] = useState("Welcome Message");
-  const [showLowerBoxes, setShowLowerBoxes] = useState(false);
+  const [showBoxes, setShowBoxes] = useState(false);
   const handleClickHeader = () => {
     setMessage("Have a Good Time!");
   }
   const handleBoxesToggle = () => {
-    setShowLowerBoxes(prevState => !prevState);
+    setShowBoxes(prevState => !prevState);
   }
 
   return (
@@ -34,9 +36,9 @@ function App() {
       <BoxContext.Provider value={contentBoxes}>
         <NavBar />
         <Header onClick={handleClickHeader} greeting={message} />
-        <Section position="upper" />
+        <UpperSection position="upper"/>
         <CallToAction onToggle={handleBoxesToggle} />
-        <Section position="lower" show={showLowerBoxes} />
+        <LowerSection position="lower" showBoxes={showBoxes} />
       </BoxContext.Provider>
     </>
   )
