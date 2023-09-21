@@ -1,6 +1,7 @@
 import './App.css'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
-import MainContainer from "../src/content/Container"
+import Content from "./content/Content"
+import Container from './container/Container';
 
 const queryClient = new QueryClient();
 
@@ -11,7 +12,9 @@ function App() {
   return (
     <div className="body-container">
       <QueryClientProvider client={queryClient}>
-        <MainContainer />
+        <Container>
+          <Content />
+        </Container>
       </QueryClientProvider>
     </div>
   )

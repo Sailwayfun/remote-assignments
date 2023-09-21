@@ -1,0 +1,12 @@
+.btn-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.btn {
+    line-height: 1.6;
+    padding: .5rem 1rem;
+    box-shadow: 0px 5px 5px #327aab;
+    background-color: #1D9BF0;
+}

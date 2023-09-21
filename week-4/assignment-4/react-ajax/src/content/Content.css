@@ -1,6 +1,7 @@
-.main-container {
-    padding: 5rem;
+.card {
+    padding: 2rem;
     border: 3px solid black;
+    border-radius: 1rem;
 }
 
 .loading {
