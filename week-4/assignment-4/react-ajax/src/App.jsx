@@ -3,7 +3,13 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import Content from "./content/Content"
 import Container from './container/Container';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false, 
+    },
+  },
+});
 
 
 function App() {

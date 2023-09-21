@@ -51,11 +51,11 @@ const Content = () => {
                 throw Error(`Incomplete data for ${member.name ? member.name : "Unknown"}`);
             }
             return <div className="card" key={member.id}>
-                <h2>{member.name}</h2>
-                <span>{member.visibility}</span>
-                <p>{member.description}</p>
-                <ul>{member.topics.map((topic, i) => <li
-                    key={i}>{topic}</li>)}</ul>
+                <h2 className="name">{member.name}</h2>
+                <span className="visibility">{member.visibility}</span>
+                <p className="description">{member.description}</p>
+                <ul className="topics">{member.topics.map((topic, i) => <li
+                    key={i} className="topic">{topic}</li>)}</ul>
             </div>
         })}
         <ViewMoreBtn onClick={(event) => viewMore(event)} disabled={isPreviousData || !(data?.length === 5)}>
