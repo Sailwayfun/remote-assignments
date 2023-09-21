@@ -1,0 +1,27 @@
+.counter-box {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+
+.btn, .counter-result {
+    font-size: 2rem;
+}
+
+.btn {
+    line-height: 1.6;
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 5px 10px #777;
+}
+
+.counter-result {
+    align-self: center;
+}
+
+
