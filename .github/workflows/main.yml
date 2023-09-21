@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload dist repository
-          path: './week-4/assignment-3/react-layout/dist'
+          path: 'week-4/assignment-3/react-layout/dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
