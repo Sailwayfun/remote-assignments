@@ -3,6 +3,7 @@
     width: 100%;
     display: flex;
     gap: 2rem;
+    flex: 1 1 40%;
 }
 
 .btn, .counter-result {
@@ -14,6 +15,7 @@
     padding: 1rem 4rem;
     border-radius: 1rem;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;;
 }
 
 .btn:hover {
@@ -23,5 +25,6 @@
 .counter-result {
     align-self: center;
 }
+
 
 

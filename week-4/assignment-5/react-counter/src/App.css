@@ -8,6 +8,17 @@
 
 .main-container {
   width: 100%;
-  border: 2px solid blue;
-  padding: 10rem;
+  display: flex;
+  flex-direction : column;
+  padding: 2rem 6rem;
+  background-image: linear-gradient(240deg, aliceblue, grey);
+}
+
+
+@media screen and (min-width: 1000px)
+{
+  .main-container {
+    flex-flow: row wrap;
+    max-width: 1440px;
+  }
 }

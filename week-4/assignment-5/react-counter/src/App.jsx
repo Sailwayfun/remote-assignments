@@ -6,6 +6,7 @@ function App() {
   const initialValues = [0, 0, 0];
   const [values, setValues] = useState(initialValues);
 
+  ////update a single counter
   function updateCounterById(e) {
     const targetId = +e.target.id;
     setValues(prev => {
@@ -15,10 +16,20 @@ function App() {
     })
   }
 
-  function updateCounters (e) {
+  ///update all the counters synchronously
+  function updateCounters () {
     setValues(prev => {
       let newValues = [...prev];
       newValues = newValues.map(value => value + 1);
+      return newValues;
+    })
+  }
+
+  ///add a new counter
+  function addNewCounter () {
+    setValues(prev => {
+      let newValues = [...prev];
+      newValues = newValues.concat([0]);
       return newValues;
     })
   }
@@ -28,6 +39,7 @@ function App() {
       <div className="main-container">
         <Counter onIncrement={updateCounters}>All + 1</Counter>
         {values.map((value, i) => <Counter key={i} id={i} value={value} onIncrement={updateCounterById}>+1</Counter>)}
+        <Counter onIncrement={addNewCounter}>Add Counter</Counter>
       </div>
     </>
   )

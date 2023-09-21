@@ -1,7 +1,6 @@
 :root {
-  background-color: goldenrod;
+  background-color: #795548;
   padding: 5rem;
-  border: 5px solid red;
   display: flex;
   justify-content: center;
 }
