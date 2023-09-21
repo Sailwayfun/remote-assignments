@@ -35,7 +35,7 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
-          cache-dependency-path: "./package-lock.json"
+          cache-dependency-path: "week-4/assignment-4/react-ajax/package-lock.json"
       - name: Install dependencies
         run: npm install
         working-directory: "week-4/assignment-3/react-layout"
@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload dist repository
-          path: './dist'
+          path: 'week-4/assignment-3/react-layout/dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
