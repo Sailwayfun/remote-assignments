@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ['main']
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -17,7 +17,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -26,29 +26,41 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
-          cache-dependency-path: "week-4/assignment-3/react-layout/package-lock.json"
-      - name: Install dependencies
-        run: npm install
-        working-directory: "week-4/assignment-3/react-layout"
-      - name: Build
-        run: npm run build
-        working-directory: "week-4/assignment-3/react-layout"
+          cache: "npm"
+     
+      - name: Install npm globally
+        run: npm install -g npm
+
+      - name: Install dependencies for week-4-assignment-3 and build
+        run: cd week-4/assignment-3/react-layout && npm install && npm run build && rm -rf node_modules
+
+      - name: Install dependencies for week-4-assignment-4 and build
+        run: cd week-4/assignment-4/react-ajax && npm install && npm run build && rm -rf node_modules
+
+      - name: Install dependencies for week-4-assignment-5 and build
+        run: cd week-4/assignment-5/react-counter && npm install && npm run build && rm -rf node_modules
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
+
+      - name: Now Path
+        run: pwd -P
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload dist repository
-          path: 'week-4/assignment-3/react-layout/dist'
+          path: "./"
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
