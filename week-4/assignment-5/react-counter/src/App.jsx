@@ -7,11 +7,10 @@ function App() {
   const [values, setValues] = useState(initialValues);
 
   ////update a single counter
-  function updateCounterById(e) {
-    const targetId = +e.target.id;
+  function updateCounterById(id) {
     setValues(prev => {
       let newValues = [...prev];
-      newValues[targetId] += 1;
+      newValues[id] += 1;
       return newValues;
     })
   }
@@ -38,7 +37,7 @@ function App() {
     <>
       <div className="main-container">
         <Counter onIncrement={updateCounters}>All + 1</Counter>
-        {values.map((value, i) => <Counter key={i} id={i} value={value} onIncrement={updateCounterById}>+1</Counter>)}
+        {values.map((value, i) => <Counter key={i} value={value} onIncrement={() => updateCounterById(i)}>+1</Counter>)}
         <Counter onIncrement={addNewCounter}>Add Counter</Counter>
       </div>
     </>
