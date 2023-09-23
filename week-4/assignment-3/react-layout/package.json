@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build && mkdir -p week-4/assignment-3/react-layout && mv dist/* week-4/assignment-3/react-layout/",
-    "deploy": "gh-pages -d week-4",
+    "predeploy": "npm run build && mkdir -p build/week-4/assignment-3/react-layout && mv dist/* build/week-4/assignment-3/react-layout/",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
