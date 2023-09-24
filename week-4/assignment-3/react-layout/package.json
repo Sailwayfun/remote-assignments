@@ -1,11 +1,11 @@
-{ "homepage": "https://sailwayfun.github.io/remote-assignments/week-4-assignment-3",
+{ "homepage": "https://sailwayfun.github.io/remote-assignments/week-4/assignment-3",
   "name": "react-layout",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -e week-4/assignment-3/react-layout",
+    "deploy": "gh-pages -d dist -e week-4/assignment-3",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
