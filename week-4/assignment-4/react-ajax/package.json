@@ -1,4 +1,5 @@
-{ "homepage": "https://sailwayfun.github.io/remote-assignments/week-4/assignment-4",
+{
+  "homepage": "https://sailwayfun.github.io/remote-assignments/week-4/assignment-4",
   "name": "react-ajax",
   "private": true,
   "version": "0.0.0",
@@ -13,6 +14,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^4.35.3",
+    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
