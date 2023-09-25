@@ -1,4 +1,4 @@
-import styles from "../ui/NavItem.module.css"
+import styles from "./NavItem.module.css"
 
 const NavItem = (props) => {
     const { type, order } = props;

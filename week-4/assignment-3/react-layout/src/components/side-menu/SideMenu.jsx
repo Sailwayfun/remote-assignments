@@ -1,4 +1,4 @@
-import styles from "../side-menu/SideMenu.module.css";
+import styles from "./SideMenu.module.css";
 import NavItem from "../ui/NavItem";
 import ToggleButton from "../ui/ToggleButton";
 

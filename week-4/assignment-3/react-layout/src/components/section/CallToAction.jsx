@@ -1,5 +1,5 @@
 import ToggleButton from "../ui/ToggleButton";
-import styles from "../section/CallToAction.module.css";
+import styles from "./CallToAction.module.css";
 
 const CallToAction = (props) => {
     return (
