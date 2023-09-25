@@ -21,7 +21,7 @@ function ajax(url) {
 
 function render(data) {
     if (!data) {
-        throw new Error("No data is available");
+        console.log("No data is available");
     }
     console.log("Successfully got the data");
     const html = data.map(product => {
@@ -29,7 +29,7 @@ function render(data) {
             product.price, toString().trim().length === 0 ||
             product.description.trim().length === 0
         ) {
-            throw new Error(`Incomplete data about product: 
+            console.log(`Incomplete data about product: 
                 ${product.name ? product.name : "Unknown"}`)
         }
         return (
@@ -45,4 +45,4 @@ function render(data) {
 ////call ajax
 ajax(url).then(data => {
     render(data);
-})
+});
