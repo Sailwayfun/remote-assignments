@@ -1,4 +1,4 @@
-import "../components/Counter.css";
+import "./Counter.css";
 import { memo } from "react";
 const Counter = memo(function Counter(props) {
     console.log(props.value, "rendered");
