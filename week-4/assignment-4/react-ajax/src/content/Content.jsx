@@ -1,12 +1,12 @@
-import "../content/Content.css"
+import "./Content.css"
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import ViewMoreBtn from "./ui/ViewMoreBtn";
+import ViewMoreBtn from "../ui/ViewMoreBtn";
 
 
 
 const Content = () => {
-    const [page, setPage] = useState(0);
+    const [page, setPage] = useState(1);
     const { isLoading, isError, data, error, isFetching, isPreviousData } = useQuery({
         queryKey: ["facebookMembers", page],
         queryFn: () => fetchFacebookMembers(page),
