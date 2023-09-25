@@ -9,7 +9,7 @@ const Counter = memo(function Counter(props) {
     </div>
 }, compareProps);
 
-function compareProps (prevProps, nextProps) {
+function compareProps(prevProps, nextProps) {
     return prevProps.value === nextProps.value;
 }
 

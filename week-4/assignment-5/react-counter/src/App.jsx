@@ -16,7 +16,7 @@ function App() {
   }
 
   ///update all the counters synchronously
-  function updateCounters () {
+  function updateCounters() {
     setValues(prev => {
       let newValues = [...prev];
       newValues = newValues.map(value => value + 1);
@@ -25,7 +25,7 @@ function App() {
   }
 
   ///add a new counter
-  function addNewCounter () {
+  function addNewCounter() {
     setValues(prev => {
       let newValues = [...prev];
       newValues = newValues.concat([0]);
